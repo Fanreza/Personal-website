@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fanreza | Home</title>
+    <style type="text/css">
+
+    body{
+      font-family: andika;
+      padding:0;
+      margin:0;
+      background-color:#f4f4f4;
+    }
+
+    .container{
+      width:80%;
+      margin:auto;
+      overflow:hidden;
+    }
+    /*Jumbotron*/  
+    #jumbotron{
+      min-height:600px;
+      background:url('alat/img/jumbotron.jpg') no-repeat 0 -400px;
+      text-align:center;
+      color:#ffffff;
+    }
+
+    #jumbotron h1{
+      margin-top:200px;
+      font-size:45px;
+      animation: text 2s;
+    }
+    #jumbotron span{
+      color: skyblue;
+    }
+
+    #jumbotron p{
+      font-size:30px;
+      animation: text 3s;
+  }
+    
+
+    #jumbotron .container img{
+      width: 300px;
+      height: 300px;
+      margin-bottom: -200px;
+      border-radius: 50%;
+      opacity: 0.8;
+    }
+
+    /*Main Section*/
+    #isi{
+      background-color: rgba(140, 215, 255,.4);
+      border-top: 5px solid skyblue;
+    }
+
+    #isi h1{
+      text-align: center;
+    }
+
+    #isi .cards .card{
+      width: 300px;
+      height: 400px;
+      background-color: rgba(255,255,255,.8);
+      box-shadow: 1px 1px 3px 1px black;
+      border-radius: 4%;
+    }
+
+    .cards{
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 30px;
+    }
+
+    .card h1{
+      font-weight: 400;
+    }
+
+    .head{
+      font-size: 30px;
+    }
+
+    .card img{
+      width: 100px;
+      display: block;
+      margin: auto;
+    }
+
+    .card p{
+      padding: 20px 40px;
+    }
+
+    /*Skill Section*/
+    #skill-section{
+      background-color: rgba(140, 215, 255,.4);
+      border-top: 5px solid skyblue;
+    }
+
+    .skill-head{
+      text-align: center;
+    }
+
+    .skill{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      
+    }
+
+    .container2 {
+    width: 500px;
+    }
+
+    .skill h1{
+      text-align: center;
+    }
+
+    .container2 li {
+        position: relative;
+        list-style: none;
+        margin: 50px 0;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .container2 li:before {
+        content: "";
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 100%;
+        height: 15px;
+        background-color: rgba(54, 126, 223, .5);
+        border-radius: 1000px;
+    }
+
+    .container2 li:after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 0;
+        height: 15px;
+        background-color: rgba(54, 126, 223, 1);
+        border-radius: 1000px;
+        animation-duration: .7s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+    .container2 span{
+      float: right;
+    }
+
+    .container2 li.html:after {
+        animation-name: html;
+    }
+    @keyframes html {
+        to {
+            width: 90%;
+        }
+    }
+
+    .container2 li.css:after {
+        animation-name: css;
+    }
+
+    @keyframes css {
+        to {
+            width: 80%;
+        }
+    }
+
+    .container2 li.js:after {
+        animation-name: js;
+    }
+
+    @keyframes js {
+        to {
+            width: 75%;
+        }
+    }
+
+    .container2 li.php:after {
+        animation-name: php;
+    }
+    @keyframes php {
+        to {
+            width: 30%;
+        }
+    }
+
+
+    .container2 li.boot:after {
+        animation-name: boot;
+    }
+
+    @keyframes boot {
+        to {
+            width: 85%;
+        }
+    }
+
+    .container2 li.figma:after {
+        animation-name: figma;
+    }
+
+    @keyframes figma {
+        to {
+            width: 40%;
+        }
+    }
+
+    /*Work Section*/
+    #work-section{
+      background-color: rgba(140, 215, 255,.4);
+      border-top: 5px solid skyblue;
+      padding-bottom: 40px;
+    }
+    #work-section h1{
+      text-align: center;
+    }
+
+    .work .work-card{
+      width: 400px;
+      height: 200px;
+      background-color: rgba(255,255,255,.8);
+      margin-top: 50px;
+      border: 5px solid #3a96c7;
+       position: relative;
+    }
+
+    .work .work-card .image{
+      width: 400px;
+      height: 200px;
+    }
+
+    .work-card a{
+       position: relative;
+    }
+
+    .work{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .work-card a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(29, 106, 154, 0.72);
+      color: #fff;
+      visibility: hidden;
+      opacity: 0;
+      padding: 50px 30px;
+      font-size: 20px;
+    }
+
+    .work-card:hover a{
+      visibility: visible;
+      opacity: 1;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .work-card:hover img{
+      opacity: .3;
+    }
+
+
+    /*Contact-section*/
+    #kontak-section{
+      background-color: rgba(140, 215, 255,.4);
+      border-top: 5px solid skyblue;
+    }
+
+    .contact{
+      text-align: center;
+    }
+
+    .contact p{
+      font-size: 20px;
+    }
+
+    .contact img{
+      width: 40px;
+      height: 40px;
+      margin: 0 5px 0;
+      padding: 5px;
+      border-radius: 40%;
+    }
+
+    /* Media Queries */
+    @media(max-width: 680px){
+    #jumbotron{
+      background:url('alat/img/jumbotron.jpg') no-repeat;
+      background-size: cover;
+    }
+    #jumbotron h1 span{
+      font-size: 55px;
+    }
+  }
+    @media screen and (max-width:680px) {
+      ul.navbar li{display: none;}
+      ul.navbar li.icon {
+        display: inline;
+      }
+    }
+     
+    @media screen and (max-width:680px) {
+      ul.navbar.responsive li {
+        float: none;
+        display: inline;
+      }
+      ul.navbar.responsive li a {
+        display: block;
+      }
+      .navbar .icon img{
+        width: 20px;
+      }
+    }
+    @keyframes text{
+      0%{
+        opacity: 0;
+      }
+    }
+
+    @font-face{
+      font-family: andika;
+      src: url(alat/AndikaNewBasic-R.ttf);
+    }
+    </style>
+    
+  </head>
+  <body>
+    <section id="jumbotron">
+      <div class="container">
+        <img src="alat/img/p2.png">
+        <h1>Hi,Im <span>Fanreza</span></h1>
+        <p>A Junior Web Developer</p>
+      </div>
+    </section>
+
+    <section id="isi">
+      <h1 class="head">What Can I do?</h1>
+      <div class="cards">
+        <div class="card">
+          <img src="alat/img/c1.png">
+          <h1>Design for personal</h1>
+          <p>design what you want graphic design or web design I can do both ,I really like designing, especially if it makes money</p>
+        </div>
+
+        <div class="card">
+          <img src="alat/img/c2.png">
+          <h1>Develope your website</h1>
+          <p>I am a developer, of course I can help develop your website</p>
+        </div>
+
+        <div class="card">
+          <img src="alat/img/c3.png">
+          <h1>Start a team project</h1>
+          <p>I like collaborating, if you want teamwork, you can invite me, working together is fun</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <div id="skill-section">
+      <h1 class="skill-head">My Skill</h1>
+      <div class="skill">
+        <div class="container2">
+              <ul>
+                  <span>90%</span><li class="html">HTML</li>
+                  <span>80%</span><li class="css">CSS</li>
+                  <span>75%</span><li class="js">JavaScript</li>
+              </ul>
+          </div>
+
+        <div class="container2">
+              <ul>
+                  <span>30%</span><li class="php">PHP</li>
+                  <span>85%</span><li class="boot">Bootstrap</li>
+                  <span>40%</span><li class="figma">Figma</li>
+              </ul>
+          </div>
+      </div>
+    </div>
+
+    <div id="work-section">
+      <h1>My Projects</h1>
+      <div class="work">
+        <div class="work-card">
+          <img src="alat/img/w1.png" class="image">
+          <a href="">the tourism website that I made with my friendss</a>
+        </div>
+
+        <div class="work-card">
+          <img src="alat/img/w2.png" class="image">
+          <a href="">My Personal Website</a>
+        </div>
+
+        <div class="work-card">
+          <img src="alat/img/w3.png" class="image">
+          <a href="">small project for a little cheating in a game on discord</a>
+        </div>
+
+        <div class="work-card">
+          <img src="alat/img/w4.png" class="image">
+          <a href="">the website I created for training submissions</a>
+        </div>
+
+        <div class="work-card">
+          <img src="alat/img/w5.png" class="image">
+          <a href="">a website that contains covid-19 information</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="kontak-section">
+      <div class="contact">
+        <h1>My Contact</h1>
+        <p>this is my contact if you want to contact me for a job or just a chat, i like to make a lot of friends</p>
+        <a href="https://wa.me/628811744883"><img src="alat/img/whatsapp.png"></a>
+        <a href="https://t.me/fanreza404"><img src="alat/img/telegram.png"></a>
+        <a href="https://www.linkedin.com/in/muhamad-jamil-87832a1a0/"><img src="alat/img/linkedin.png"></a>
+        <a href="https://web.facebook.com/muhamadjamil461/"><img src="alat/img/facebook.png"></a>
+        <a href="https://www.instagram.com/muhamadjamil461/"><img src="alat/img/instagram.png"></a>
+        <p>and also I like playing games, this is my account name if you want to play together</p>
+        <a href=""><img src="alat/img/g1.png"></a>
+        <a href=""><img src="alat/img/g2.png"></a>
+        <a href=""><img src="alat/img/g3.png"></a>
+        <a href=""><img src="alat/img/g4.png"></a>
+        <a href=""><img src="alat/img/g5.png"></a>
+        <a href=""><img src="alat/img/g6.png"></a>
+      </div>
+    </div>
+  </body>
+</html>
+  
